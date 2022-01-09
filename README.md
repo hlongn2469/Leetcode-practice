@@ -1,2 +1,9 @@
 # Leetcode-practice
-Collection of LeetCode questions to ace the coding interview! - Created using [LeetHub](https://github.com/QasimWani/LeetHub)
+Leetcode practice with topics including:
+- [ ] DFS and BFS
+- [ ] Sliding Windows
+- [ ] Linked List
+- [ ] Trees
+- [ ] Graphs
+- [ ] Dynamic Programming
+- [ ] Heaps
