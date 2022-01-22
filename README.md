@@ -1,8 +1,8 @@
 # Leetcode-practice
 Leetcode practice with topics including:
 - [ ] DFS and BFS
-  * 209
 - [ ] Sliding Windows
+  * 209
 - [ ] Linked List
 - [ ] Trees
 - [ ] Graphs
