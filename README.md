@@ -3,6 +3,7 @@ Leetcode practice with topics including:
 - [ ] DFS and BFS
 - [ ] Sliding Windows
   * 209
+  * 3
 - [ ] Linked List
 - [ ] Trees
 - [ ] Graphs
