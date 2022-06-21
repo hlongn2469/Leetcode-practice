@@ -1,53 +1,22 @@
 class Solution {
     public int lengthOfLongestSubstring(String s) {
-        int left = 0;
-        int right = 0;
-        String substr = "";
-        int longest_substr = 0;
-        int ret_val = 0;
-        
-        // loop through string length
-        while(s.length() >= right){
-            if(right == s.length()){
-                break;
+        int max = 0;
+        HashMap<Character, Integer> map = new HashMap<>();
+        for(int j = 0,i = 0; j < s.length(); j++){
+            // update i pointer if detect a duplicated character
+            if(map.containsKey(s.charAt(j))){
+                i = Math.max(map.get(s.charAt(j)), i);
             }
-            // if meet condition, then slide left pointer
-            if(checkRepeat(substr,s.charAt(right))){
-                System.out.println(substr + " | " + ret_val);
-                ret_val = Math.max(longest_substr, ret_val);
-                System.out.println(substr + " | " + ret_val);
-                substr = substr.substring(1);  
-                longest_substr--;
-                
-                
-            // if not meet condition, then slide right pointer
-            } else {
-                substr += s.charAt(right);
-                right++;
-                longest_substr++;
-            }
+            // constantly calculate max for each interation
+            max = Math.max(max, j - i + 1);
             
+            // constantly update the position of the character to the map
+            map.put(s.charAt(j), j + 1);
         }
-        ret_val = Math.max(longest_substr, ret_val);
+        return max;
         
-        return ret_val;
+        // abcabcbb
+        // i
+        // j
     }
-        
-        
-    // helper function to check repeating characters within a substring
-    public boolean checkRepeat(String s, char c){
-        for(int i = 0; i < s.length();i++){
-            if(s.charAt(i) == c){
-                return true;
-            }
-        }
-        return false;
-    }
-            
-        
-        // "abcabcbb
-        //L  ^
-        //R    ^
-        //substr = "abc"
-        // count = 3
 }
